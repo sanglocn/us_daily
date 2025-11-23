@@ -8,8 +8,8 @@ st.set_page_config(page_title="Daily Snapshot", layout="wide")
 st.title("Daily Snapshot")
 
 CSV_URLS = {
-    "daily": "https://raw.githubusercontent.com/sanglocn/blank-app/main/data/us_snapshot_ohlcv_daily.csv",
-    "weekly": "https://raw.githubusercontent.com/sanglocn/blank-app/main/data/us_snapshot_ohlcv_weekly.csv",
+    "daily": "https://raw.githubusercontent.com/sanglocn/us_daily/main/data/us_snapshot_ohlcv_daily.csv",
+    "weekly": "https://raw.githubusercontent.com/sanglocn/us_daily/main/data/us_snapshot_ohlcv_weekly.csv",
 }
 
 GROUP_ORDER = ["Market", "Sector", "Commodity", "Crypto", "Country", "Theme", "Leader"]
