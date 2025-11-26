@@ -104,7 +104,7 @@ def stage_emoji(s):
     return {1: "🟡", 2: "🟢", 3: "🟠", 4: "🔴"}.get(s, "⚪") if pd.notna(s) else "⚪"
 
 def volume_icon(v):
-    icons = {"Pocket": "💎", "High": "🚨", "Normal": "⚪"}
+    icons = {"Pocket": "💎", "Normal": "⚪"}
     return icons.get(str(v), "⚪") if pd.notna(v) else "⚪"
 
 def checkmark(val):
