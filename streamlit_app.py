@@ -17,7 +17,7 @@ GROUP_ORDER = ["Market", "Sector", "Commodity", "Crypto", "Country", "Theme", "L
 DISPLAY_ORDER = [
     "Ticker", "RS Trend", "RS 1M", "RS 1Y", "Volume",
     "Intraday", "1D Return", "Extension",
-    "> SMA10", "> SMA20", "SMA10 > SMA20", "Stage"
+    "> SMA10", "> SMA20", "Stage"
 ]
 
 COLUMN_RENAME = {
@@ -30,7 +30,6 @@ COLUMN_RENAME = {
     "ext_multiple": "Extension",
     "above_sma10": "> SMA10",
     "above_sma20": "> SMA20",
-    "sma10_sma20": "SMA10 > SMA20",
     "stage": "Stage",
     "group": "group",
 }
@@ -162,7 +161,6 @@ for group_name in GROUP_ORDER:
         "Volume": volume_icon,
         "> SMA10": checkmark,
         "> SMA20": checkmark,
-        "SMA10 > SMA20": checkmark,
     }, na_rep="")
 
     styled = styled.map(style_returns, subset=pd.IndexSlice[:, ["Intraday", "1D Return"]])
