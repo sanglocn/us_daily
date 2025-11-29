@@ -30,7 +30,7 @@ COLUMN_RENAME = {
     "ratio_pct_dist_to_atr_pct": "Extension",
     "above_sma10": "> SMA10",
     "above_sma20": "> SMA20",
-    "stage": "Stage",
+    "stage_label_core": "Stage",
     "group": "group",
 }
 
