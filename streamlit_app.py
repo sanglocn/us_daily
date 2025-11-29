@@ -7,6 +7,20 @@ import pandas as pd
 st.set_page_config(page_title="Daily Snapshot", layout="wide")
 st.title("Daily Snapshot")
 
+st.markdown("""
+    <style>
+        .stDataFrame div[data-testid="stHorizontalBlock"] {
+            overflow-x: visible !important;
+        }
+        .stDataFrame table {
+            width: 100% !important;
+        }
+        .stDataFrame {
+            height: auto !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 CSV_URLS = {
     "daily": "https://raw.githubusercontent.com/sanglocn/us_daily/main/data/us_snapshot_ohlcv_daily.csv",
     "weekly": "https://raw.githubusercontent.com/sanglocn/us_daily/main/data/us_snapshot_ohlcv_weekly.csv",
