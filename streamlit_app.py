@@ -69,7 +69,7 @@ df = load_and_process_data()
 # Sidebar Filters & Navigation
 # ===================================
 st.sidebar.header("Filters")
-hide_weak_rs_1m = st.sidebar.toggle("Strong RS 1M", value=False, help="Hide all tickers with RS Rank (1M) below 85%")
+hide_weak_rs_1m = st.sidebar.toggle("Strong RS 1M", value=True, help="Hide all tickers with RS Rank (1M) below 85%")
 hide_weak_rs_1y = st.sidebar.toggle("Strong RS 1Y", value=False, help="Hide all tickers with RS Rank (1Y) below 85%")
 limit_extension = st.sidebar.toggle("Low Extension", value=False, help="Hide all tickers with Extension Multiple above 4")
 stage_2_only = st.sidebar.toggle("Core Model", value=False, help="Hide all tickers different from Stage 2 in Core Model")
@@ -133,7 +133,7 @@ def style_extension(val):
 # Display Tables by Group
 # ===================================
 column_config = {
-    "RS Trend": st.column_config.LineChartColumn("RS", width="small", y_min=0, y_max=0.9)
+    "RS Trend": st.column_config.LineChartColumn("RS", width="small", y_min=None, y_max=None)
 } if "RS Trend" in df.columns else {}
 
 for group_name in GROUP_ORDER:
