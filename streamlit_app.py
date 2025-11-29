@@ -22,12 +22,12 @@ DISPLAY_ORDER = [
 
 COLUMN_RENAME = {
     "ticker": "Ticker",
-    "intraday_ret": "Intraday",
-    "1d_ret": "1D Return",
-    "rs_1m": "RS 1M",
-    "rs_1y": "RS 1Y",
-    "volume_alert": "Volume",
-    "ext_multiple": "Extension",
+    "ret_intraday": "Intraday",
+    "ret_1d": "1D Return",
+    "rs_rank_21d": "RS 1M",
+    "rs_rank_252d": "RS 1Y",
+    "pp_volume": "Volume",
+    "ratio_pct_dist_to_atr_pct": "Extension",
     "above_sma10": "> SMA10",
     "above_sma20": "> SMA20",
     "stage": "Stage",
@@ -47,7 +47,7 @@ def load_and_process_data():
 
     df_sparkline = (
         df_daily.sort_values("date")
-        .groupby("ticker")["rs_ratio"]
+        .groupby("ticker")["rs_to_spy"]
         .apply(list)
         .reset_index(name="RS Trend")
     )
