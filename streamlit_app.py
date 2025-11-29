@@ -133,7 +133,7 @@ def style_extension(val):
 # Display Tables by Group
 # ===================================
 column_config = {
-    "RS Trend": st.column_config.LineChartColumn("RS", width="small", y_min=None, y_max=None)
+    "RS Trend": st.column_config.LineChartColumn("RS", width="small", y_min=0, y_max=20)
 } if "RS Trend" in df.columns else {}
 
 for group_name in GROUP_ORDER:
