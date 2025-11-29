@@ -171,7 +171,6 @@ for group_name in GROUP_ORDER:
         styled,
         column_config=column_config,
         use_container_width=True,
-        hide_index=True,
-        height=5000
+        hide_index=True
     )
     st.markdown("---")
