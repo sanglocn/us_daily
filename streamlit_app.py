@@ -53,7 +53,7 @@ def load_and_process_data():
     )
 
     df_latest = df_daily.sort_values("date").groupby("ticker").last().reset_index()
-    df_stage = df_weekly.sort_values("date").groupby("ticker")["stage"].last().reset_index()
+    df_stage = df_weekly.sort_values("date").groupby("ticker")["stage_label_core"].last().reset_index()
 
     df = df_sparkline.merge(df_latest, on="ticker", how="left")
     df = df.merge(df_stage, on="ticker", how="left")
