@@ -100,10 +100,10 @@ def ext(val):
     return f"{val:.1f}" if pd.notna(val) else ""
 
 def stage_emoji(s):
-    return {1: "🟡", 2: "🟢", 3: "🟠", 4: "🔴"}.get(s, "⚪") if pd.notna(s) else "⚪"
+    return {"Stage 1": "🟡", "Stage 2": "🟢", "Stage 3": "🟠", "Stage 4": "🔴"}.get(s, "⚪") if pd.notna(s) else "⚪"
 
 def volume_icon(v):
-    icons = {"Pocket": "💎", "Normal": "⚪"}
+    icons = {"1": "💎", "0": "⚪"}
     return icons.get(str(v), "⚪") if pd.notna(v) else "⚪"
 
 def checkmark(val):
